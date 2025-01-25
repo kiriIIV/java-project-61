@@ -13,16 +13,22 @@ public class Progression {
 
         System.out.println("What number is missing in the progression?");
 
-        for (int i = 0; i < 3; i++) {
+        int countOfRounds = 3;
+        int lengthOfProgression = 10;
+        int maxNumberOfProgression = 30;
+        int maxOfStep = 6;
+        int maxIndexOfSkip = 10;
 
-            String[] progression = new String[10];
-            int firstNumber = rand.nextInt(30);
-            int step = rand.nextInt(6) + 1;
-            int skip = rand.nextInt(10);
+        for (int i = 0; i < countOfRounds; i++) {
+
+            String[] progression = new String[lengthOfProgression];
+            int firstNumber = rand.nextInt(maxNumberOfProgression);
+            int step = rand.nextInt(maxOfStep) + 1;
+            int skip = rand.nextInt(maxIndexOfSkip);
             String question = "";
             String correctAnswer = "";
 
-            for (int j = 0; j < 10; j++) {
+            for (int j = 0; j < progression.length; j++) {
                 if (j == skip) {
                     progression[j] = "..";
                     question += progression[j] + " ";
@@ -40,7 +46,7 @@ public class Progression {
                 return "";
             }
         }
-        System.out.println("Congratulations, " + Engine.nameOfUser + "!");
+        System.out.println("Congratulations, " + Engine.getNameOfUser() + "!");
         return "";
     }
 }

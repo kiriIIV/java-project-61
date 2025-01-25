@@ -13,10 +13,13 @@ public class GCD {
 
         System.out.println("Find the greatest common divisor of given numbers.");
 
-        for (int i = 0; i < 3; i++) {
+        int countOfRounds = 3;
+        int maxNumber = 100;
 
-            int firstNumber = rand.nextInt(100);
-            int secondNumber = rand.nextInt(100);
+        for (int i = 0; i < countOfRounds; i++) {
+
+            int firstNumber = rand.nextInt(maxNumber);
+            int secondNumber = rand.nextInt(maxNumber);
             String correctAnswer = String.valueOf(GCD.nod(firstNumber, secondNumber));
             String question = firstNumber + " " + secondNumber;
 
@@ -25,7 +28,7 @@ public class GCD {
                 return "";
             }
         }
-        System.out.println("Congratulations, " + Engine.nameOfUser + "!");
+        System.out.println("Congratulations, " + Engine.getNameOfUser() + "!");
         return "";
     }
 

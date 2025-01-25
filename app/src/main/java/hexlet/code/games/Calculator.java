@@ -14,13 +14,16 @@ public class Calculator {
 
         System.out.println("What is the result of the expression?");
 
+        int countOfRounds = 3;
+        int maxNumber = 100;
+
         String[] operations = new String[] {"+", "-", "*"};
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < countOfRounds; i++) {
 
-            int firstNumber = rand.nextInt(100);
-            int secondNumber = rand.nextInt(100);
-            int index = rand.nextInt(3);
+            int firstNumber = rand.nextInt(maxNumber);
+            int secondNumber = rand.nextInt(maxNumber);
+            int index = rand.nextInt(operations.length);
             String correctAnswer = "";
             String question = firstNumber + " " + operations[index] + " " + secondNumber;
 
@@ -43,7 +46,7 @@ public class Calculator {
                 return "";
             }
         }
-        System.out.println("Congratulations, " + Engine.nameOfUser + "!");
+        System.out.println("Congratulations, " + Engine.getNameOfUser() + "!");
         return "";
     }
 }

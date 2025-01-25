@@ -4,19 +4,25 @@ import java.util.Scanner;
 
 public class Engine {
 
-    static Scanner scanner = new Scanner(System.in);
-    public static String nameOfUser;
+    private static String nameOfUser;
 
     public static void greet() {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
+        Scanner scanner = new Scanner(System.in);
         nameOfUser = scanner.nextLine();
         System.out.println("Hello, " + nameOfUser + "!");
+    }
+
+    public static String getNameOfUser() {
+
+        return nameOfUser;
     }
 
     public static String correct(String question, String correct) {
         System.out.println("Question: " + question);
         System.out.print("Your answer: ");
+        Scanner scanner = new Scanner(System.in);
         String answer = scanner.nextLine();
         if (correct.equals(answer)) {
             System.out.println("Correct!");

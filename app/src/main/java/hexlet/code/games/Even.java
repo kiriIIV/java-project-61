@@ -14,9 +14,12 @@ public class Even {
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
-        for (int i = 0; i < 3; i++) {
+        int countOfRounds = 3;
+        int maxNumber = 100;
 
-            int number = rand.nextInt(100);
+        for (int i = 0; i < countOfRounds; i++) {
+
+            int number = rand.nextInt(maxNumber);
             String correctAnswer = number % 2 == 0 ? "yes" : "no";
             String question = String.valueOf(number);
 
@@ -25,7 +28,7 @@ public class Even {
                 return "";
             }
         }
-        System.out.println("Congratulations, " + Engine.nameOfUser + "!");
+        System.out.println("Congratulations, " + Engine.getNameOfUser() + "!");
         return "";
     }
 }
