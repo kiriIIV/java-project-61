@@ -22,6 +22,7 @@ public class Calculator {
             int secondNumber = rand.nextInt(100);
             int index = rand.nextInt(3);
             String correctAnswer = "";
+            String question = firstNumber + " " + operations[index] + " " + secondNumber;
 
             switch (operations[index]) {
                 case "+":
@@ -37,7 +38,7 @@ public class Calculator {
                     break;
             }
 
-            String result = Engine.correct(firstNumber + " " + operations[index] + " " + secondNumber, correctAnswer);
+            String result = Engine.correct(question, correctAnswer);
             if (result.equals("Error")) {
                 return "";
             }

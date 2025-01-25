@@ -17,9 +17,10 @@ public class GCD {
 
             int firstNumber = rand.nextInt(100);
             int secondNumber = rand.nextInt(100);
-            String correctAnswer = "" + GCD.nod(firstNumber, secondNumber);
+            String correctAnswer = String.valueOf(GCD.nod(firstNumber, secondNumber));
+            String question = firstNumber + " " + secondNumber;
 
-            String result = Engine.correct(firstNumber + " " + secondNumber, correctAnswer);
+            String result = Engine.correct(question, correctAnswer);
             if (result.equals("Error")) {
                 return "";
             }
