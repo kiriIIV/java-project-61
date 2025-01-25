@@ -6,6 +6,10 @@ import java.util.Random;
 
 
 public class Calculator {
+
+    private static final int countOfRounds = 3;
+    private static final int maxNumber = 100;
+
     public static String game() {
 
         Random rand = new Random();
@@ -13,9 +17,6 @@ public class Calculator {
         Engine.greet();
 
         System.out.println("What is the result of the expression?");
-
-        int countOfRounds = 3;
-        int maxNumber = 100;
 
         String[] operations = new String[] {"+", "-", "*"};
 

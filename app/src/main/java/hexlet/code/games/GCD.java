@@ -5,6 +5,10 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class GCD {
+
+    private static final int countOfRounds = 3;
+    private static final int maxNumber = 100;
+
     public static String game() {
 
         Random rand = new Random();
@@ -12,9 +16,6 @@ public class GCD {
         Engine.greet();
 
         System.out.println("Find the greatest common divisor of given numbers.");
-
-        int countOfRounds = 3;
-        int maxNumber = 100;
 
         for (int i = 0; i < countOfRounds; i++) {
 

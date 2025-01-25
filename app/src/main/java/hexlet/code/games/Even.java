@@ -6,6 +6,10 @@ import java.util.Random;
 
 
 public class Even {
+
+    private static final int countOfRounds = 3;
+    private static final int maxNumber = 100;
+
     public static String game() {
 
         Random rand = new Random();
@@ -13,9 +17,6 @@ public class Even {
         Engine.greet();
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-
-        int countOfRounds = 3;
-        int maxNumber = 100;
 
         for (int i = 0; i < countOfRounds; i++) {
 

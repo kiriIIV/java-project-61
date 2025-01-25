@@ -15,7 +15,6 @@ public class Engine {
     }
 
     public static String getNameOfUser() {
-
         return nameOfUser;
     }
 

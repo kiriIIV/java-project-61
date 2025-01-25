@@ -5,6 +5,13 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Progression {
+
+    private static final int countOfRounds = 3;
+    private  static  final int lengthOfProgression = 10;
+    private  static  final int maxNumberOfProgression = 30;
+    private  static  final int maxOfStep = 6;
+    private static final int maxIndexOfSkip = 10;
+
     public static String game() {
 
         Random rand = new Random();
@@ -12,12 +19,6 @@ public class Progression {
         Engine.greet();
 
         System.out.println("What number is missing in the progression?");
-
-        int countOfRounds = 3;
-        int lengthOfProgression = 10;
-        int maxNumberOfProgression = 30;
-        int maxOfStep = 6;
-        int maxIndexOfSkip = 10;
 
         for (int i = 0; i < countOfRounds; i++) {
 
