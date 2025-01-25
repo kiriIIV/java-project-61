@@ -19,8 +19,8 @@ public class GCD {
 
         for (int i = 0; i < countOfRounds; i++) {
 
-            int firstNumber = rand.nextInt(maxNumber);
-            int secondNumber = rand.nextInt(maxNumber);
+            int firstNumber = rand.nextInt(maxNumber) + 1;
+            int secondNumber = rand.nextInt(maxNumber) + 1;
             String correctAnswer = String.valueOf(GCD.nod(firstNumber, secondNumber));
             String question = firstNumber + " " + secondNumber;
 
