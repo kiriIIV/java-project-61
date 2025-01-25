@@ -18,24 +18,26 @@ public class Calculator {
 
         for (int i = 0; i < 3; i++) {
 
-            int first_number = rand.nextInt(100);
-            int second_number = rand.nextInt(100);
+            int firstNumber = rand.nextInt(100);
+            int secondNumber = rand.nextInt(100);
             int index = rand.nextInt(3);
             String correctAnswer = "";
 
             switch (operations[index]) {
                 case "+":
-                    correctAnswer += first_number + second_number;
+                    correctAnswer += firstNumber + secondNumber;
                     break;
                 case "-":
-                    correctAnswer += first_number - second_number;
+                    correctAnswer += firstNumber - secondNumber;
                     break;
                 case "*":
-                    correctAnswer += first_number * second_number;
+                    correctAnswer += firstNumber * secondNumber;
+                    break;
+                default:
                     break;
             }
 
-            String result = Engine.correct(first_number + " " + operations[index] + " " + second_number, correctAnswer);
+            String result = Engine.correct(firstNumber + " " + operations[index] + " " + secondNumber, correctAnswer);
             if (result.equals("Error")) {
                 return "";
             }

@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.games.Calculator;
 import hexlet.code.games.Cli;
 import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
 
 import java.util.Scanner;
 
@@ -13,23 +14,27 @@ public class App {
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
+        System.out.println("4 - GCD");
         System.out.println("0 - Exit");
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Your choice: ");
-        int choice = scanner.nextInt();
+        String choice = scanner.nextLine();
 
         switch (choice) {
-            case 1:
+            case "1":
                 Cli.greetings();
                 break;
-            case 2:
+            case "2":
                 Even.game();
                 break;
-            case 3:
+            case "3":
                 Calculator.game();
                 break;
-            case 0:
+            case "4":
+                GCD.game();
+                break;
+            case "0":
                 break;
             default:
                 System.out.println("Wrong command!");
