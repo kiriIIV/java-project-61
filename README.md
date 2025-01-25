@@ -13,3 +13,6 @@ https://asciinema.org/a/OY1aSPjXAFKvgt5JzgQWUzKI4
 
 ### Video test progression game
 https://asciinema.org/a/qwuV84apAReqoeNwuFpAQDEkg
+
+### Video test prime game
+https://asciinema.org/a/I52ErSihLEsKwX9zygdBq6HoC
