@@ -3,11 +3,13 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+
+demo2.cast
+demo4.cast
+
 demo.cast
 demo1.cast
-demo2.cast
 demo3.cast
-demo4.cast
 
 ### IntelliJ IDEA ###
 .idea/
