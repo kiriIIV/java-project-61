@@ -10,3 +10,6 @@ https://asciinema.org/a/dgVIkW3jdMIRZVnFDhziImIff
 
 ### Video test gcd game
 https://asciinema.org/a/OY1aSPjXAFKvgt5JzgQWUzKI4
+
+### Video test progression game
+https://asciinema.org/a/qwuV84apAReqoeNwuFpAQDEkg
