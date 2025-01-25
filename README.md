@@ -7,3 +7,6 @@ https://asciinema.org/a/ulr7MpFRugX8KBgrvKycejftv
 
 ### Video test calc game
 https://asciinema.org/a/dgVIkW3jdMIRZVnFDhziImIff
+
+### Video test gcd game
+https://asciinema.org/a/OY1aSPjXAFKvgt5JzgQWUzKI4
