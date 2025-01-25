@@ -20,11 +20,13 @@ public class Progression {
             int step = rand.nextInt(6) + 1;
             int skip = rand.nextInt(10);
             String question = "";
+            String correctAnswer = "";
 
             for (int j = 0; j < 10; j++) {
                 if (j == skip) {
                     progression[j] = "..";
                     question += progression[j] + " ";
+                    correctAnswer += firstNumber;
                     firstNumber += step;
                 } else {
                     progression[j] = "" + firstNumber;
@@ -32,8 +34,6 @@ public class Progression {
                     firstNumber += step;
                 }
             }
-
-            String correctAnswer = "" + (Integer.parseInt(progression[skip - 1]) + step);
 
             String result = Engine.correct(question, correctAnswer);
             if (result.equals("Error")) {
