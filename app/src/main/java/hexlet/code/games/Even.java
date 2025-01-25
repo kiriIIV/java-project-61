@@ -7,8 +7,8 @@ import java.util.Random;
 
 public class Even {
 
-    private static final int countOfRounds = 3;
-    private static final int maxNumber = 100;
+    private static  final int COUNT_OF_ROUNDS = 3;
+    private static final int MAX_NUMBER = 100;
 
     public static String game() {
 
@@ -18,9 +18,9 @@ public class Even {
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
-        for (int i = 0; i < countOfRounds; i++) {
+        for (int i = 0; i < COUNT_OF_ROUNDS; i++) {
 
-            int number = rand.nextInt(maxNumber);
+            int number = rand.nextInt(MAX_NUMBER);
             String correctAnswer = number % 2 == 0 ? "yes" : "no";
             String question = String.valueOf(number);
 

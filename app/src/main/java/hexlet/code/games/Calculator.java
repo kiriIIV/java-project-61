@@ -7,8 +7,8 @@ import java.util.Random;
 
 public class Calculator {
 
-    private static final int countOfRounds = 3;
-    private static final int maxNumber = 100;
+    private static  final int COUNT_OF_ROUNDS = 3;
+    private static final int MAX_NUMBER = 100;
 
     public static String game() {
 
@@ -20,10 +20,10 @@ public class Calculator {
 
         String[] operations = new String[] {"+", "-", "*"};
 
-        for (int i = 0; i < countOfRounds; i++) {
+        for (int i = 0; i < COUNT_OF_ROUNDS; i++) {
 
-            int firstNumber = rand.nextInt(maxNumber);
-            int secondNumber = rand.nextInt(maxNumber);
+            int firstNumber = rand.nextInt(MAX_NUMBER);
+            int secondNumber = rand.nextInt(MAX_NUMBER);
             int index = rand.nextInt(operations.length);
             String correctAnswer = "";
             String question = firstNumber + " " + operations[index] + " " + secondNumber;

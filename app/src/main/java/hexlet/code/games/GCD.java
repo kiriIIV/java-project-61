@@ -6,8 +6,8 @@ import java.util.Random;
 
 public class GCD {
 
-    private static final int countOfRounds = 3;
-    private static final int maxNumber = 100;
+    private static  final int COUNT_OF_ROUNDS = 3;
+    private static final int MAX_NUMBER = 100;
 
     public static String game() {
 
@@ -17,10 +17,10 @@ public class GCD {
 
         System.out.println("Find the greatest common divisor of given numbers.");
 
-        for (int i = 0; i < countOfRounds; i++) {
+        for (int i = 0; i < COUNT_OF_ROUNDS; i++) {
 
-            int firstNumber = rand.nextInt(maxNumber) + 1;
-            int secondNumber = rand.nextInt(maxNumber) + 1;
+            int firstNumber = rand.nextInt(MAX_NUMBER) + 1;
+            int secondNumber = rand.nextInt(MAX_NUMBER) + 1;
             String correctAnswer = String.valueOf(GCD.nod(firstNumber, secondNumber));
             String question = firstNumber + " " + secondNumber;
 

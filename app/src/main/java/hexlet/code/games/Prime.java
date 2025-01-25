@@ -6,8 +6,8 @@ import java.util.Random;
 
 public class Prime {
 
-    private static  final int countOfRounds = 3;
-    private static final int maxNumber = 100;
+    private static  final int COUNT_OF_ROUNDS = 3;
+    private static final int MAX_NUMBER = 100;
 
     public static String game() {
 
@@ -17,9 +17,9 @@ public class Prime {
 
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
-        for (int i = 0; i < countOfRounds; i++) {
+        for (int i = 0; i < COUNT_OF_ROUNDS; i++) {
 
-            int number = rand.nextInt(maxNumber);
+            int number = rand.nextInt(MAX_NUMBER);
             String correctAnswer = Prime.isPrime(number);
             String question = String.valueOf(number);
 
