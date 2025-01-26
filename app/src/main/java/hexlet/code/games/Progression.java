@@ -6,6 +6,7 @@ import hexlet.code.RandomUtil;
 public class Progression {
 
     private static final int COUNT_OF_ROUNDS = 3;
+    private  static final int LENGTH_OF_PROGRESSION = 10;
 
     public static String[][] game() {
 
@@ -17,7 +18,7 @@ public class Progression {
 
         for (int i = 0; i < COUNT_OF_ROUNDS; i++) {
 
-            String[] progression = new String[RandomUtil.getRandomLength()];
+            String[] progression = new String[LENGTH_OF_PROGRESSION];
             int firstNumber = RandomUtil.getRandomNumber();
             int step = RandomUtil.getRandomStep() + 1;
             int skip = RandomUtil.getRandomSkip();
