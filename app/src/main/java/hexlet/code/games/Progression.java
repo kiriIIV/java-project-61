@@ -1,18 +1,18 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
 import hexlet.code.RandomUtil;
 
 public class Progression {
 
     private static final int COUNT_OF_ROUNDS = 3;
     private  static final int LENGTH_OF_PROGRESSION = 10;
+    private static final String MESSAGE = "What number is missing in the progression?";
+
+    public static String getMessage() {
+        return MESSAGE;
+    }
 
     public static String[][] game() {
-
-        Engine.greet();
-
-        System.out.println("What number is missing in the progression?");
 
         String[][] dataBase = new String[COUNT_OF_ROUNDS][2];
 

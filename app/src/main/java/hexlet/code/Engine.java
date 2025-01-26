@@ -6,14 +6,6 @@ public class Engine {
 
     private static String nameOfUser;
 
-    public static void greet() {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        Scanner scanner = new Scanner(System.in);
-        nameOfUser = scanner.nextLine();
-        System.out.println("Hello, " + nameOfUser + "!");
-    }
-
     public static String getNameOfUser() {
         return nameOfUser;
     }
@@ -33,7 +25,15 @@ public class Engine {
         return "";
     }
 
-    public static void startGame(String[][] dataBase) {
+    public static void startGame(String[][] dataBase, String message) {
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        Scanner scanner = new Scanner(System.in);
+        nameOfUser = scanner.nextLine();
+        System.out.println("Hello, " + nameOfUser + "!");
+
+        System.out.println(message);
+
         for (String[] pair : dataBase) {
             String question = pair[0];
             String correctAnswer = pair[1];

@@ -1,17 +1,17 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
 import hexlet.code.RandomUtil;
 
 public class Even {
 
     private static final int COUNT_OF_ROUNDS = 3;
+    private static final String MESSAGE = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+
+    public static String getMessage() {
+        return MESSAGE;
+    }
 
     public static String[][] game() {
-
-        Engine.greet();
-
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         String[][] dataBase = new String[COUNT_OF_ROUNDS][2];
 

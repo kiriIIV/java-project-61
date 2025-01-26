@@ -1,17 +1,17 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
 import hexlet.code.RandomUtil;
 
 public class Calculator {
 
     private static final int COUNT_OF_ROUNDS = 3;
+    private static final String MESSAGE = "What is the result of the expression?";
+
+    public static String getMessage() {
+        return MESSAGE;
+    }
 
     public static String[][] game() {
-
-        Engine.greet();
-
-        System.out.println("What is the result of the expression?");
 
         String[] operations = new String[] {"+", "-", "*"};
         String[][] dataBase = new String[COUNT_OF_ROUNDS][2];

@@ -30,19 +30,19 @@ public class App {
                 Cli.greetings();
                 break;
             case "2":
-                Engine.startGame(Even.game());
+                Engine.startGame(Even.game(), Even.getMessage());
                 break;
             case "3":
-                Engine.startGame(Calculator.game());
+                Engine.startGame(Calculator.game(), Calculator.getMessage());
                 break;
             case "4":
-                Engine.startGame(GCD.game());
+                Engine.startGame(GCD.game(), GCD.getMessage());
                 break;
             case "5":
-                Engine.startGame(Progression.game());
+                Engine.startGame(Progression.game(), Progression.getMessage());
                 break;
             case "6":
-                Engine.startGame(Prime.game());
+                Engine.startGame(Prime.game(), Prime.getMessage());
                 break;
             case "0":
                 break;
