@@ -1,31 +1,26 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Random;
+import hexlet.code.RandomUtil;
 
 public class Progression {
 
-    private static  final int COUNT_OF_ROUNDS = 3;
-    private  static  final int LENGTH_OF_PROGRESSION = 10;
-    private  static  final int MAX_NUMBER_OF_PROGRESSION = 30;
-    private  static  final int MAX_OF_STEP = 6;
-    private static final int MAX_INDEX_OF_SKIP = 10;
+    private static final int COUNT_OF_ROUNDS = 3;
 
-    public static String game() {
-
-        Random rand = new Random();
+    public static String[][] game() {
 
         Engine.greet();
 
         System.out.println("What number is missing in the progression?");
 
+        String[][] dataBase = new String[COUNT_OF_ROUNDS][2];
+
         for (int i = 0; i < COUNT_OF_ROUNDS; i++) {
 
-            String[] progression = new String[LENGTH_OF_PROGRESSION];
-            int firstNumber = rand.nextInt(MAX_NUMBER_OF_PROGRESSION);
-            int step = rand.nextInt(MAX_OF_STEP) + 1;
-            int skip = rand.nextInt(MAX_INDEX_OF_SKIP);
+            String[] progression = new String[RandomUtil.getRandomLength()];
+            int firstNumber = RandomUtil.getRandomNumber();
+            int step = RandomUtil.getRandomStep() + 1;
+            int skip = RandomUtil.getRandomSkip();
             String question = "";
             String correctAnswer = "";
 
@@ -41,13 +36,9 @@ public class Progression {
                     firstNumber += step;
                 }
             }
-
-            String result = Engine.correct(question, correctAnswer);
-            if (result.equals("Error")) {
-                return "";
-            }
+            dataBase[i][0] = question;
+            dataBase[i][1] = correctAnswer;
         }
-        System.out.println("Congratulations, " + Engine.getNameOfUser() + "!");
-        return "";
+        return dataBase;
     }
 }

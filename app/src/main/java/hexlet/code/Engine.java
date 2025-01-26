@@ -32,4 +32,16 @@ public class Engine {
         }
         return "";
     }
+
+    public static void startGame(String[][] dataBase) {
+        for (String[] pair : dataBase) {
+            String question = pair[0];
+            String correctAnswer = pair[1];
+            String result = Engine.correct(question, correctAnswer);
+            if (result.equals("Error")) {
+                return;
+            }
+        }
+        System.out.println("Congratulations, " + nameOfUser + "!");
+    }
 }
