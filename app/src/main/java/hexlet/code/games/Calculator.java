@@ -1,22 +1,18 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.RandomUtil;
 
 public class Calculator {
 
-    private static final int COUNT_OF_ROUNDS = 3;
     private static final String MESSAGE = "What is the result of the expression?";
 
-    public static String getMessage() {
-        return MESSAGE;
-    }
-
-    public static String[][] game() {
+    public static void game() {
 
         String[] operations = new String[] {"+", "-", "*"};
-        String[][] dataBase = new String[COUNT_OF_ROUNDS][2];
+        String[][] dataBase = new String[Engine.COUNT_OF_ROUNDS][2];
 
-        for (int i = 0; i < COUNT_OF_ROUNDS; i++) {
+        for (int i = 0; i < Engine.COUNT_OF_ROUNDS; i++) {
 
             int firstNumber = RandomUtil.getRandomNumber();
             int secondNumber = RandomUtil.getRandomNumber();
@@ -26,7 +22,7 @@ public class Calculator {
             dataBase[i][0] = question;
             dataBase[i][1] = correctAnswer;
         }
-        return dataBase;
+        Engine.startGame(dataBase, Calculator.MESSAGE);
     }
 
     public static String getAnswer(String[] operations, int index, int firstNumber, int secondNumber) {

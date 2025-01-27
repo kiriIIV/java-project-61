@@ -1,21 +1,17 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.RandomUtil;
 
 public class Prime {
 
-    private static final int COUNT_OF_ROUNDS = 3;
     private static final String MESSAGE = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-    public static String getMessage() {
-        return MESSAGE;
-    }
+    public static void game() {
 
-    public static String[][] game() {
+        String[][] dataBase = new String[Engine.COUNT_OF_ROUNDS][2];
 
-        String[][] dataBase = new String[COUNT_OF_ROUNDS][2];
-
-        for (int i = 0; i < COUNT_OF_ROUNDS; i++) {
+        for (int i = 0; i < Engine.COUNT_OF_ROUNDS; i++) {
 
             int number = RandomUtil.getRandomNumber();
             String correctAnswer = Prime.isPrime(number);
@@ -24,7 +20,7 @@ public class Prime {
             dataBase[i][0] = question;
             dataBase[i][1] = correctAnswer;
         }
-        return dataBase;
+        Engine.startGame(dataBase, Prime.MESSAGE);
     }
 
     public static String isPrime(int a) {
